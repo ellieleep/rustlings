@@ -3,8 +3,13 @@
 
 // I AM NOT DONE
 
+use crate::exercises::enums::enums3::Message::quit;
+
 enum Message {
-    // TODO: implement the message variant types based on their usage below
+    ChangeColor(),
+    Echo(String),
+    // Move(Point { x: 32, y: u32})
+    Quit
 }
 
 struct Point {
@@ -36,7 +41,7 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
-        // TODO: create a match expression to process the different message variants
+        // fix
     }
 }
 
