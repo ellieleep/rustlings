@@ -39,8 +39,13 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
-        // fix
-    }
+        match Message
+        {
+            Message::ChangeColor => self.change_color((u8,u8,u8)),
+            Message::Echo => self.echo(String),
+            Message::Move => self.move_position(Point),
+            Message::Quit => self.quit()
+        }
 }
 
 #[cfg(test)]
