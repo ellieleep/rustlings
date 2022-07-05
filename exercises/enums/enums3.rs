@@ -3,12 +3,10 @@
 
 // I AM NOT DONE
 
-use crate::exercises::enums::enums3::Message::quit;
-
 enum Message {
-    ChangeColor(),
+    ChangeColor((u8,u8,u8)),
     Echo(String),
-    // Move(Point { x: 32, y: u32})
+    Move(Point),
     Quit
 }
 
