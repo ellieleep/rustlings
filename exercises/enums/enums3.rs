@@ -39,14 +39,14 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
-        match Message
+        match message
         {
-            Message::ChangeColor => self.change_color((u8,u8,u8)),
-            Message::Echo => self.echo(String),
-            Message::Move => self.move_position(Point),
+            Message::ChangeColor(color) => self.change_color(color),
+            Message::Echo(msg) => self.echo(msg),
+            Message::Move(point) => self.move_position(point),
             Message::Quit => self.quit()
         }
-}
+}}
 
 #[cfg(test)]
 mod tests {
