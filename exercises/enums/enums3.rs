@@ -1,13 +1,11 @@
 // enums3.rs
 // Address all the TODOs to make the tests pass!
 
-// I AM NOT DONE
-
 enum Message {
-    ChangeColor((u8,u8,u8)),
+    ChangeColor((u8, u8, u8)),
     Echo(String),
     Move(Point),
-    Quit
+    Quit,
 }
 
 struct Point {
@@ -39,14 +37,14 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
-        match message
-        {
+        match message {
             Message::ChangeColor(color) => self.change_color(color),
             Message::Echo(msg) => self.echo(msg),
             Message::Move(point) => self.move_position(point),
-            Message::Quit => self.quit()
+            Message::Quit => self.quit(),
         }
-}}
+    }
+}
 
 #[cfg(test)]
 mod tests {
